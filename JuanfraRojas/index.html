@@ -6,7 +6,23 @@
     <title>Pagina Prueba</title>
 </head>
 <body>
-    <h1>Philipe</h1>
-    <img src="renderColor2.png" alt="">
+    <h1>Demo LocalHost</h1>
+  
+    <input type="" id="miInput" placeholder="Ingrese su nombre">
+    <button onclick="guardarEnLocalStorage()">Guardar</button>
+    <button onclick="mostrarValorLocalStorage()">Mostrar anterior nombre</button>
+  
+    <script>
+      function guardarEnLocalStorage(){
+        var valorText= document.getElementById("miInput").value;
+        localStorage.setItem("miInputValor", valorText);
+        alert("Se guardo en local storage correctamente")
+      }
+      function mostrarValorLocalStorage(){
+        var valorGuardado = localStorage.getItem('miInputValor');
+        alert("el anterior nombre que se puso fue: "+ valorGuardado);
+      }
+  
+    </script>
 </body>
 </html>
