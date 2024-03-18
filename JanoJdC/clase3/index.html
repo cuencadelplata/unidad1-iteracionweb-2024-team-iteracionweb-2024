@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Demo localStorage de Jano
+    </h1>
+
+    <input type="text" id="inputText">
+    <button onclick="guardarTexto()">Guardar</button>
+
+    <script>
+
+        function guardarTexto() {
+            var texto = document.getElementById('inputText').value;
+            localStorage.setItem('textoGuardado', texto);
+            alert('Se guardó el valor ingresado.');
+        }
+
+        window.onload = function() {
+            var textoGuardado = localStorage.getItem('textoGuardado');
+            if (textoGuardado) {
+                document.getElementById('inputText').value = textoGuardado;
+            }
+        };
+    </script>
+</body>
+</html>
