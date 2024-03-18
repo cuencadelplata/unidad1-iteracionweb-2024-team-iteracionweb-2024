@@ -19,9 +19,10 @@
         alert("Se guardo en local storage correctamente")
       }
       function mostrarValorLocalStorage(){
-        var valorGuardado = localStorage.getItem('miInputValor');
-        alert("el anterior nombre que se puso fue: "+ valorGuardado);
-      }
+      var valorGuardado = localStorage.getItem('miInputValor');
+      document.getElementById("miInput").value = valorGuardado;
+      alert("el anterior nombre que se puso fue: "+ valorGuardado);
+    }
   
     </script>
 </body>
