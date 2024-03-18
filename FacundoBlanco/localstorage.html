@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo LocalStorage</title>
+</head>
+<body>
+    <h1>Demo LocalStorage</h1>
+    <input type="text" id="texto">
+    <script>
+        const input = document.getElementById('texto');
+
+        if (localStorage.getItem('texto'))
+        {
+            input.value = localStorage.getItem('texto');
+        }
+        input.addEventListener('input', function(){
+            localStorage.setItem('texto', input.value);
+        });
+    </script>
+</body>
+</html>
