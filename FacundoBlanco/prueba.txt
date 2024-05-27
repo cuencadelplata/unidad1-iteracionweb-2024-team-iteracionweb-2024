@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-prueba    2
-=======
-prueba4
->>>>>>> origin/master
+prueba 2
